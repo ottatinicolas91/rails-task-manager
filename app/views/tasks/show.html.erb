@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+<div class="container-task-details">
+  <p><%= @task.details %></p>
+</div>
+<ul>
+  <% if @task.completed %>
+    <%= check_box_tag 'task_completed[x]', @task.id, true %><p>This task is not completed yet.</p>
+  <% else %>
+    <%= check_box_tag 'task_completed[]', @task.id %> <p>This task is completed</p>
+  <% end %>
+</ul>
+<%= link_to "Back to list", tasks_path %> 
