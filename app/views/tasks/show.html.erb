@@ -1,4 +1,7 @@
-<h1><%= @task.title %></h1>
+<div>
+  <h1><%= @task.title %></h1>
+  <%= link_to "Edit this task", edit_task_path %>
+</div>
 <div class="container-task-details">
   <p><%= @task.details %></p>
 </div>
@@ -9,4 +12,4 @@
     <%= check_box_tag 'task_completed[]', @task.id %> <p>This task is completed</p>
   <% end %>
 </ul>
-<%= link_to "Back to list", tasks_path %> 
+<%= link_to "Back to list", tasks_path %>
